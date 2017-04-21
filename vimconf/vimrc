@@ -15,6 +15,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Valloric/YouCompleteMe'
 Plug 'flazz/vim-colorschemes'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
@@ -139,6 +140,8 @@ nnoremap <space>b :enew<CR>
 nnoremap <space>n :bnext<CR>
 " switch to previous buffer
 nnoremap <space>m :bprevious<CR>
+" alternate buffer
+nnoremap ^ :b#<CR>
 
 " Close current buffer and move to the previous one
 "nnoremap <space>cp :bp <BAR> :bd #<CR>
@@ -150,6 +153,8 @@ nmap <Leader>y :!echo -==<C-R><C-W>==- ;ici <C-R><C-W><CR>
 " edit ultisnips
 nnoremap <space>ue :cd ~/.vim/ <BAR> :UltiSnipsEdit<CR>
 
+" reload current file
+noremap <f5> :e!<CR>
 
 """""""""""""""""""""
 "      Plugins      "
@@ -240,9 +245,44 @@ let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+
+"airline theme
+let g:airline_theme='simple'
+
 " ultisnips
 
 " specify search path
 let g:UltiSnipsSnippetDirectories = ['mysnippets','gosnippets/UltiSnips','UltiSnips']
 " :UltiSnipsEdit vertical split window
 let g:UltiSnipsEditSplit="vertical"
+
+source ~/.vim/after/plugin/highlight.vim
