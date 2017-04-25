@@ -1,0 +1,25 @@
+[user]
+	name = cqxmzhc
+	email = ldzslds@gmail.com
+[alias]
+	st = status
+	br = branch
+	bra = branch -a
+	brd = branch -d
+	cm = commit -a -m
+	df = diff
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset | %C(bold)%an' --abbrev-commit --date=relative
+	cl = clone
+	co = checkout
+	confl = config --global --list
+	confe = config --global --edit
+	rt = revert
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = true
+	pager = true
+[push]
+	default = simple

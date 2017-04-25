@@ -6,7 +6,7 @@
 						{
 							"function": "powerline.segments.common.net.hostname",
 							"args": {
-								"only_if_ssh": true,
+								"only_if_ssh": false,
 								"exclude_domain":true
 							},
 							"priority": 10
