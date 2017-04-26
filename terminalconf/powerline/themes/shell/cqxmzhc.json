@@ -3,53 +3,54 @@
 		"above": [
 			{
 				"left": [
-						{
-							"function": "powerline.segments.common.net.hostname",
-							"args": {
-								"only_if_ssh": false,
-								"exclude_domain":true
-							},
-							"priority": 10
+					{
+						"function": "powerline.segments.common.net.hostname",
+						"args": {
+							"only_if_ssh": false,
+							"exclude_domain":true
 						},
-						{
-							"function": "powerline.segments.shell.cwd",
-							"args": {
-								"dir_limit_depth": 0,
-								"use_path_separator": true
-							},
-								"priority": 10
+						"priority": 80
+					},
+					{
+						"function": "powerline.segments.shell.cwd",
+						"args": {
+							"dir_limit_depth": 0,
+							"use_path_separator": true
 						},
-						{
-							"function": "powerline_gitstatus.gitstatus",
-							"priority": 40
+						"priority": 40
+					},
+					{
+						"function": "powerline_gitstatus.gitstatus",
+						"priority": 10
+					},
+					{
+						"function": "powerline.segments.common.time.date",
+						"args": {
+							"format": "%H:%M:%S %A",
+							"istime": true
 						},
-						{
-							"function": "powerline.segments.common.time.date",
-							"args": {
-								"format": "%H:%M:%S %A",
-						  		"istime": true
-							}
-						},
-						{
-							"function": "powerline.segments.shell.jobnum",
-							"priority": 20
-						},
-						{
-							"function": "powerline.segments.shell.last_status",
-							"priority": 10
-						}
+						"priority": 70
+					},
+					{
+						"function": "powerline.segments.shell.jobnum",
+						"priority": 50
+					},
+					{
+						"function": "powerline.segments.shell.last_status",
+						"priority": 60
+					}
 				]
 			}
 		],
 		"left": [
-				{
-					"function": "powerline.segments.common.env.virtualenv",
-					"priority": 50
-				},
-				{
-					"function": "powerline.segments.common.env.user",
-					"priority": 30
-				}
+			{
+				"function": "powerline.segments.common.env.virtualenv",
+				"priority": 50
+			},
+			{
+				"function": "powerline.segments.common.env.user",
+				"priority": 30
+			}
 
 		]
 	}
