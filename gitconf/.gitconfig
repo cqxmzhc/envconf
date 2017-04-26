@@ -6,7 +6,7 @@
 	br = branch
 	bra = branch -a
 	brd = branch -d
-	cm = commit -a -m
+	cm = commit -m
 	df = diff
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset | %C(bold)%an' --abbrev-commit --date=relative
 	cl = clone
