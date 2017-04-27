@@ -158,6 +158,9 @@ nnoremap <space>ue :cd ~/.vim/ <BAR> :UltiSnipsEdit<CR>
 " reload current file
 noremap <f5> :e!<CR>
 
+" search and replace
+noremap <space>s <esc>:%s/\v
+
 """""""""""""""""""""
 "      Plugins      "
 """""""""""""""""""""
