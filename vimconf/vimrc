@@ -18,7 +18,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
-Plug 'cqxmzhc/potion', {'dir': '~/vimPlugins'}
+Plug '~/vimPlugins/cqxmzhc/potion'
 call plug#end()
 
 """"""""""""""""""""""
@@ -161,7 +161,13 @@ noremap <f5> :e!<CR>
 " search and replace
 noremap <space>s <esc>:%s/\v
 
-"""""""""""""""""""""
+" toggle window full screen
+noremap <space>f :call <SID>wfs()<CR>
+
+" map ; to :
+noremap ; :
+
+""""""""""""""""""""
 "      Plugins      "
 """""""""""""""""""""
 
@@ -278,5 +284,21 @@ let g:airline_theme='simple'
 let g:UltiSnipsSnippetDirectories = ['mysnippets','gosnippets/UltiSnips','UltiSnips']
 " :UltiSnipsEdit vertical split window
 let g:UltiSnipsEditSplit="vertical"
+
+""""""""""""""""""""""
+"  Custom Fcuntions  "
+""""""""""""""""""""""
+" toggle window full screen
+let s:current_window_full_screen = 0
+function! <SID>wfs()
+	if s:current_window_full_screen
+		wincmd =
+		let s:current_window_full_screen=0
+	else
+		wincmd _
+		wincmd |
+		let s:current_window_full_screen=1
+	endif
+endfunction
 
 source ~/.vim/after/plugin/highlight.vim
