@@ -18,7 +18,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
-Plug '~/vimPlugins/cqxmzhc/potion'
+Plug 'tomtom/tcomment_vim'
 call plug#end()
 
 """"""""""""""""""""""
@@ -80,6 +80,11 @@ let g:rehash256 = 1
 let g:molokai_original = 1
 colorscheme molokai
 
+" indentation
+set expandtab
+set shiftwidth=4
+set softtabstop=4 
+                                    
 """"""""""""""""""""""
 "      Mappings      "
 """"""""""""""""""""""
@@ -167,6 +172,9 @@ noremap <space>f :call <SID>wfs()<CR>
 " map ; to :
 noremap ; :
 
+"tcomment mapping
+nmap <c-/> gc
+
 """"""""""""""""""""
 "      Plugins      "
 """""""""""""""""""""
@@ -231,7 +239,7 @@ augroup go
   autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 
   " insert comment
-  autocmd Filetype go nmap<buffer> <c-_> I//<esc>
+  " autocmd Filetype go nmap<buffer> <c-_> I//<esc>
 augroup END
 
 " build_go_files is a custom function that builds or compiles the test file.

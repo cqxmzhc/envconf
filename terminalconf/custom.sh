@@ -2,10 +2,8 @@
 alias ls='ls --color=auto'                                                                                                                        
 alias vb='vim ~/.bashrc'
 alias sb='source ~/.bashrc'
-alias vc='vim ~/custom.sh'
+alias vc='vim ~/.custom.sh'
 alias j='jobs -l'
-alias f='fg %'
-alias b='bg %'
 
 # git editor
 export GIT_EDITOR=vim
@@ -25,4 +23,4 @@ POWERLINE_BASH_SELECT=1
 . /usr/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 
 # dircolors
-eval `dircolors ~/.dir_colors/dircolors`
+eval `dircolors ~/.dir_colors`
