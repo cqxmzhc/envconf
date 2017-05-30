@@ -73,6 +73,11 @@ if has('persistent_undo')
   set undodir=~/.config/vim/tmp/undo//
 endif
 
+" autoindent
+set expandtab
+set shiftwidth=4
+set tabstop=4
+
 " Colorscheme
 syntax enable
 set t_Co=256
@@ -204,7 +209,7 @@ augroup go
   autocmd!
 
   " Show by default 4 spaces for a tab
-  autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+  autocmd BufNewFile,BufRead *.go setlocal expandtab tabstop=4 shiftwidth=4
 
   " :GoBuild and :GoTestCompile
   autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
