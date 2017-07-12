@@ -25,7 +25,5 @@
 	pager = true
 [push]
 	default = simple
-[filter "confmodifier"]
-	smudge = confmodifier.py
-[filter "testfilter"]
-	smudge = testfilter.py
+[core]
+	editor = vim
