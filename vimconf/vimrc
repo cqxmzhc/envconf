@@ -60,6 +60,10 @@ set lazyredraw                  " Wait to redraw
 set cursorline
 set cursorcolumn
 
+"git 
+"git变化标记的更新时间100 ms
+set updatetime=100
+
 " Enable to copy to clipboard for operations like yank, delete, change and put
 " http://stackoverflow.com/questions/20186975/vim-mac-how-to-copy-to-clipboard-without-pbcopy
 if has('unnamedplus')
@@ -189,9 +193,11 @@ let g:go_fmt_command = "goimports"
 let g:go_autodetect_gopath = 1
 let g:go_list_type = "quickfix"
 
+let g:go_def_mode = 'godef'
+
 let g:go_gocode_unimported_packages = 1
-let g:ycm_gocode_binary_path = "$GOPATH/bin/gocode"
-let g:ycm_godef_binary_path = "$GOPATH/bin/godef"
+let g:ycm_gocode_binary_path = "/home/zhang_bin/go/common/bin/gocode"
+let g:ycm_godef_binary_path = "/home/zhang_bin/dev/bin/godef"
 
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
